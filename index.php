@@ -35,7 +35,7 @@
     <h3>Conteúdo do arquivo:</h3>
     <textarea id = "conteudo7" rows="4" cols="30">texto de exemplo...</textarea>
     <br>
-    <button id="btnSalvar">Salvar.txt</button>
+    <button id="btnSalvar">Salvar</button>
       
     </form>
 
