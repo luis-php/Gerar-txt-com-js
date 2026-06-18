@@ -8,11 +8,17 @@ if(isset($_POST)){
     $genero = $_POST['genero'];
     $texto = $_POST['texto'];
 
-    $query = "INSERT INTO usuarios (nome, email, senha, nascimento, genero, texto) VALUES (:nome, :email, :senha, :nascimento, :genero, :texto)"
-              VALUES (:nome, :email, :senha, :nascimento, :genero, :texto)";
+    $query = "INSERT INTO usuarios (nome, email, senha, nascimento, genero, texto) VALUES (:nome, :email, :senha, :nascimento, :genero, :texto)";
     
     $stmt = $pdo->prepare($query);
-    $stmt->execute();
+    $stmt->execute(array(
+        ':nome' => $nome,
+        ':email' => $email,
+        ':senha' => $senha,
+        ':nascimento' => $nascimento,
+        ':genero' => $genero,
+        ':texto' => $texto
+    ));
 
     header("Location: sucessobd.php?criado=sucesso");
 }
