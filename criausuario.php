@@ -25,8 +25,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         header("Location: sucessobd.php?criado=sucesso");
         exit;
-    } catch (PDOException $e) {
-        echo 'Erro ao gravar: ' . $e->getMessage();
-        exit;
-    }
+    
 }
