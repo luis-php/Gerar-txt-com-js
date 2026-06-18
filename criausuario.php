@@ -6,18 +6,13 @@ if(isset($_POST)){
     $senha = $_POST['senha'];
     $nascimento = $_POST['nascimento'];
     $genero = $_POST['genero'];
+    $texto = $_POST['texto'];
 
-    $sql = "INSERT INTO usuarios (nome, email, senha, nascimento, genero) VALUES (:nome, :email, :senha, :nascimento, :genero)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':nome', $nome);
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':senha', $senha);
-    $stmt->bindParam(':nascimento', $nascimento);
-    $stmt->bindParam(':genero', $genero);
+    $query = "INSERT INTO usuarios (nome, email, senha, nascimento, genero, texto) VALUES (:nome, :email, :senha, :nascimento, :genero, :texto)"
+              VALUES (:nome, :email, :senha, :nascimento, :genero, :texto)";
+    
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
 
-    if($stmt->execute()){
-        echo "Usuário cadastrado com sucesso!";
-    } else {
-        echo "Erro ao cadastrar usuário.";
-    }
+    header("Location: sucessobd.php?criado=sucesso");
 }
