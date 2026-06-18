@@ -1,25 +1,32 @@
 <?php
 require("conexaobd.php");
-if(isset($_POST)){
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-    $nascimento = $_POST['nascimento'];
-    $genero = $_POST['genero'];
-    $texto = $_POST['texto'];
 
-    $query = "INSERT INTO usuarios (nome, email, senha, nascimento, genero, texto) 
-                VALUES (:nome, :email, :senha, :nascimento, :genero, :texto)";
-    
-    $stmt = $pdo->prepare($query);
-    $stmt->execute([
-        ':nome' => $nome,
-        ':email' => $email,
-        ':senha' => $senha,
-        ':nascimento' => $nascimento,
-        ':genero' => $genero,
-        ':texto' => $texto
-    ]);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nome'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $senha = $_POST['senha'] ?? '';
+    $nascimento = $_POST['nascimento'] ?? null;
+    $genero = $_POST['genero'] ?? null;
+    $texto = $_POST['texto'] ?? null;
 
-    header("Location: sucessobd.php?criado=sucesso");
+    try {
+        $query = "INSERT INTO usuarios (nome, email, senha, nascimento, genero, texto) 
+                    VALUES (:nome, :email, :senha, :nascimento, :genero, :texto)";
+        
+        $stmt = $pdo->prepare($query);
+        $stmt->execute([
+            ':nome' => $nome,
+            ':email' => $email,
+            ':senha' => $senha,
+            ':nascimento' => $nascimento,
+            ':genero' => $genero,
+            ':texto' => $texto
+        ]);
+
+        header("Location: sucessobd.php?criado=sucesso");
+        exit;
+    } catch (PDOException $e) {
+        echo 'Erro ao gravar: ' . $e->getMessage();
+        exit;
+    }
 }

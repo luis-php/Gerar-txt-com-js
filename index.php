@@ -23,10 +23,10 @@
     <br><br>
   
     <label for="senha">Senha:</label><br>
-    <input type = "password" id = "senha" name = "senha" placeholder = "Digite sua senha" minimum length = "6" required>
+    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" minlength="6" required>
     <br><br>
       
-    <label for ="data_nasc">Data de nascimento: </label><br>
+    <label for="data_nasc">Data de nascimento: </label><br>
     <input type="date" id = "nascimento" name = "nascimento">
     <br><br>
       
@@ -37,9 +37,9 @@
       <label for="feminino">Feminino</label>
       
     <h3>Conteúdo do arquivo:</h3>
-    <textarea id = "texto" rows="4" cols="30">texto de exemplo...</textarea>
+    <textarea id="texto" name="texto" rows="4" cols="30">texto de exemplo...</textarea>
     <br>
-    <button id="submit">Cadastrar</button>
+    <button id="submit" type="submit">Cadastrar</button>
       
     </form>
   </body>
