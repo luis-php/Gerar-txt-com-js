@@ -8,7 +8,7 @@
     
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8"/>
-    <title>Gerar TXT com JS</title>
+    <title>Gerar TXT</title>
 
   </head>
   <body>
@@ -39,10 +39,8 @@
     <h3>Conteúdo do arquivo:</h3>
     <textarea id = "texto" rows="4" cols="30">texto de exemplo...</textarea>
     <br>
-    <button id="btnSalvar">Salvar</button>
+    <button id="submit">Cadastrar</button>
       
     </form>
-
-    <script src="sketch.js"></script>
   </body>
 </html>
