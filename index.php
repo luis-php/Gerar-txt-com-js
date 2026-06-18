@@ -12,7 +12,7 @@
 
   </head>
   <body>
-    <form action = "/processar_cadastro" method = "POST">
+    <form action = "criausuario.php" method = "POST">
       
           <br><br><label for="nome">Nome: </label><br>
           <input type = "text" id = "nome" name = "nome" placeholder = "Digite seu nome" required>
