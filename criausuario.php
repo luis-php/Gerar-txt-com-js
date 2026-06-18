@@ -1,15 +1,15 @@
 <?php
 require("conexaobd.php");
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nome = $_POST['nome'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $senha = $_POST['senha'] ?? '';
-    $nascimento = $_POST['nascimento'] ?? null;
-    $genero = $_POST['genero'] ?? null;
-    $texto = $_POST['texto'] ?? null;
+if (isset($_POST)) {
 
-    try {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $nascimento = $_POST['nascimento'];
+    $genero = $_POST['genero'];
+    $texto = $_POST['texto']; 
+
         $query = "INSERT INTO usuarios (nome, email, senha, nascimento, genero, texto) 
                     VALUES (:nome, :email, :senha, :nascimento, :genero, :texto)";
         

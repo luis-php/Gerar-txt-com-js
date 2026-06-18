@@ -15,11 +15,11 @@
     <form action = "criausuario.php" method = "POST">
       
           <br><br><label for="nome">Nome: </label><br>
-          <input type = "text" id = "nome" name = "nome" placeholder = "Digite seu nome" required>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
           <br><br>
   
     <label for = "email">E-mail: </label><br>
-    <input type = "email" id="email" name = "email" placeholder = "Seu email@exemplo.com" required>
+    <input type="email" id="email" name="email" placeholder="Seu email@exemplo.com" required>
     <br><br>
   
     <label for="senha">Senha:</label><br>
@@ -27,19 +27,19 @@
     <br><br>
       
     <label for="data_nasc">Data de nascimento: </label><br>
-    <input type="date" id = "nascimento" name = "nascimento">
+    <input type="date" id="nascimento" name="nascimento">
     <br><br>
       
       <label>Gênero:</label><br>
-      <input type = "radio" id = "masculino" name = "genero" value = "masculino">
+      <input type="radio" id="masculino" name="genero" value="masculino">
       <label for="masculino">Masculino</label>
-      <input type = "radio" id = "feminino" name = "genero" value = "feminino">
+      <input type="radio" id="feminino" name="genero" value="feminino">
       <label for="feminino">Feminino</label>
       
     <h3>Conteúdo do arquivo:</h3>
     <textarea id="texto" name="texto" rows="4" cols="30">texto de exemplo...</textarea>
     <br>
-    <button id="submit" type="submit">Cadastrar</button>
+    <button type="submit">Cadastrar</button>
       
     </form>
   </body>
