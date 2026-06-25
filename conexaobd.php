@@ -2,7 +2,7 @@
 
 $usuario = "root";
 $senha = "escola";
-$dbname = "gerartxt";
+$dbname = "Local instance 3306";
 $host = "localhost";
 $port = 3306;
 
