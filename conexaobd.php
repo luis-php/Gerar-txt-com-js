@@ -3,8 +3,7 @@
 $usuario = "root";
 $senha = "escola";
 $dbname = "gerartxt";
-$host = "localhost";
-$port = 3306;
+$host = "localhost:3306";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $usuario, $senha);
