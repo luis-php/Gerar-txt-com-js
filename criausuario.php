@@ -10,12 +10,12 @@ if (isset($_POST)) {
     $genero = $_POST['genero'];
     $texto = $_POST['texto']; 
 
-        $query = "INSERT INTO usuarios (nome, email, senha, nascimento, genero, texto) 
+    $query = "INSERT INTO usuarios (nome, email, senha, nascimento, genero, texto) 
                     VALUES ('$nome', '$email', '$senha', '$nascimento', '$genero', '$texto')";
         
-        $stmt = $pdo->prepare($query);
-        $stmt->execute();
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
 
-        header("Location: sucessobd.php?criado=sucesso");
+    header("Location: sucessobd.php?criado=sucesso");
     
 }
