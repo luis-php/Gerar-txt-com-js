@@ -14,7 +14,7 @@ if (isset($_POST)) {
                     VALUES ('$nome', '$email', '$senha', '$nascimento', '$genero', '$texto')";
         
     $stmt = $pdo->prepare($query);
-    $stmt->execute();
+    $stmt->execute([$nome, $email, $senha, $nascimento, $genero, $texto]);
 
     header("Location: sucessobd.php?criado=sucesso");
     
