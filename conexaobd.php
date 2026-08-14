@@ -1,7 +1,7 @@
 <?php
 
 $usuario = "root";
-$senha = "escola";
+$senha = "";
 $dbname = "gerartxt";
 $host = "localhost:3306";
 
