@@ -7,7 +7,7 @@ $host = "localhost:3306";
 
 try 
 {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $usuario, $senha);
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $usuarios, $senha);
 }
 catch (PDOException $e)
 {
