@@ -1,1 +1,1 @@
-SELECT * FROM gerartxt.usuario;
+SELECT * FROM gerartxt.usuarios;
