@@ -1,7 +1,7 @@
 <?php
 
 $usuario = "root";
-$senha = "";
+$senha = "YES";
 $dbname = "gerartxt";
 $host = "localhost:3306";
 
